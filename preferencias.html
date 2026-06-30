@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferencias de Colección</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🏆 ARGENTINA CAMPEONA 2022</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Álbum</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="preferencias.html" class="active">Preferencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="header-album">
+        <h1>⚙️ Preferencias de Colección</h1>
+        <p>Personaliza tu experiencia en el Álbum Virtual</p>
+    </div>
+
+    <!-- CONTENEDOR DE PREFERENCIAS -->
+    <div class="seccion-preferencias">
+        <form id="formPreferencias">
+            <!-- SECCIÓN 1: NOTIFICACIONES -->
+            <div class="pref-seccion">
+                <h2>📢 Notificaciones</h2>
+                <div class="pref-item">
+                    <input type="checkbox" id="notifNuevos" name="notifNuevos" checked>
+                    <label for="notifNuevos">Notificarme cuando hay nuevas figuritas disponibles</label>
+                </div>
+                <div class="pref-item">
+                    <input type="checkbox" id="notifIntercambios" name="notifIntercambios" checked>
+                    <label for="notifIntercambios">Notificarme sobre propuestas de intercambio</label>
+                </div>
+                <div class="pref-item">
+                    <input type="checkbox" id="notifEmail" name="notifEmail" checked>
+                    <label for="notifEmail">Enviarme resumen por correo electrónico</label>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: PRIVACIDAD Y SEGURIDAD -->
+            <div class="pref-seccion">
+                <h2>🔒 Privacidad y Seguridad</h2>
+                <div class="pref-item">
+                    <label for="privacyLevel">Nivel de Privacidad:</label>
+                    <select id="privacyLevel" name="privacyLevel">
+                        <option value="publica">Pública (Todos pueden ver mi colección)</option>
+                        <option value="amigos">Solo Amigos (Usuarios agregados)</option>
+                        <option value="privada" selected>Privada (Solo yo)</option>
+                    </select>
+                </div>
+                <div class="pref-item">
+                    <input type="checkbox" id="mostrarFaltantes" name="mostrarFaltantes" checked>
+                    <label for="mostrarFaltantes">Mostrar mis figuritas faltantes en el perfil</label>
+                </div>
+                <div class="pref-item">
+                    <input type="checkbox" id="mostrarOferta" name="mostrarOferta" checked>
+                    <label for="mostrarOferta">Permitir que otros usuarios vean mis ofertas de intercambio</label>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: VISUALIZACIÓN -->
+            <div class="pref-seccion">
+                <h2>🎨 Visualización</h2>
+                <div class="pref-item">
+                    <label for="vistaGrid">Modo de Vista:</label>
+                    <select id="vistaGrid" name="vistaGrid">
+                        <option value="grid">Cuadrícula (Grid)</option>
+                        <option value="lista">Lista</option>
+                        <option value="compacta">Compacta</option>
+                    </select>
+                </div>
+                <div class="pref-item">
+                    <label for="tamanioFig">Tamaño de Figuritas:</label>
+                    <select id="tamanioFig" name="tamanioFig">
+                        <option value="pequeño">Pequeño</option>
+                        <option value="mediano" selected>Mediano</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </div>
+                <div class="pref-item">
+                    <input type="checkbox" id="mostrarSombra" name="mostrarSombra" checked>
+                    <label for="mostrarSombra">Mostrar efecto de sombra en las tarjetas</label>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: COLECCIÓN -->
+            <div class="pref-seccion">
+                <h2>📚 Preferencias de Colección</h2>
+                <div class="pref-item">
+                    <label for="ordenar">Ordenar figuritas por:</label>
+                    <select id="ordenar" name="ordenar">
+                        <option value="nombre">Nombre del Jugador</option>
+                        <option value="posicion">Posición</option>
+                        <option value="numero">Número de Figurita</option>
+                        <option value="estado" selected>Estado (Pegadas/Faltantes)</option>
+                    </select>
+                </div>
+                <div class="pref-item">
+                    <label for="filtroPos">Filtrar por Posición:</label>
+                    <select id="filtroPos" name="filtroPos">
+                        <option value="todos" selected>Todas las Posiciones</option>
+                        <option value="arquero">Arqueros</option>
+                        <option value="defensa">Defensas</option>
+                        <option value="mediocampo">Mediocampo</option>
+                        <option value="delantero">Delanteros</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 5: INTERCAMBIOS -->
+            <div class="pref-seccion">
+                <h2>🔄 Preferencias de Intercambio</h2>
+                <div class="pref-item">
+                    <input type="checkbox" id="permitirIntercambios" name="permitirIntercambios" checked>
+                    <label for="permitirIntercambios">Permitir propuestas de intercambio</label>
+                </div>
+                <div class="pref-item">
+                    <label for="distancia">Distancia máxima para intercambio:</label>
+                    <select id="distancia" name="distancia">
+                        <option value="cualquiera" selected>Cualquier distancia</option>
+                        <option value="10">10 km</option>
+                        <option value="25">25 km</option>
+                        <option value="50">50 km</option>
+                        <option value="100">100 km</option>
+                        <option value="nacional">Nacional (Todo el país)</option>
+                    </select>
+                </div>
+                <div class="pref-item">
+                    <input type="checkbox" id="intercambioEnvios" name="intercambioEnvios" checked>
+                    <label for="intercambioEnvios">Acepto intercambios por correo postal</label>
+                </div>
+                <div class="pref-item">
+                    <input type="checkbox" id="intercambioLocal" name="intercambioLocal" checked>
+                    <label for="intercambioLocal">Prefiero intercambios presenciales</label>
+                </div>
+            </div>
+
+            <!-- BOTONES -->
+            <div class="acciones">
+                <input type="submit" value="💾 GUARDAR CAMBIOS" class="btn-enviar">
+                <input type="reset" value="↺ RESTAURAR POR DEFECTO" class="btn-reset">
+            </div>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2022-2026 Álbum Virtual Argentina - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Cargar preferencias guardadas desde localStorage
+        window.addEventListener('load', function() {
+            const saved = localStorage.getItem('userPreferences');
+            if (saved) {
+                const prefs = JSON.parse(saved);
+                Object.keys(prefs).forEach(key => {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        if (element.type === 'checkbox') {
+                            element.checked = prefs[key];
+                        } else {
+                            element.value = prefs[key];
+                        }
+                    }
+                });
+            }
+        });
+
+        // Guardar preferencias
+        document.getElementById('formPreferencias').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const prefs = {};
+            const inputs = this.querySelectorAll('input, select');
+            inputs.forEach(input => {
+                if (input.id) {
+                    prefs[input.id] = input.type === 'checkbox' ? input.checked : input.value;
+                }
+            });
+            
+            localStorage.setItem('userPreferences', JSON.stringify(prefs));
+            alert('✅ ¡Preferencias guardadas correctamente!');
+        });
+    </script>
+</body>
+</html>
