@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Soporte y Mensajes de Intercambio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🏆 ARGENTINA CAMPEONA 2022</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Álbum</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="preferencias.html">Preferencias</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="header-album">
+        <h1>📧 Centro de Contacto</h1>
+        <p>Soporte técnico e intercambio de figuritas</p>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container-contacto">
+        <!-- COLUMNA 1: SOPORTE TÉCNICO -->
+        <div class="seccion-contacto">
+            <h2>🛠️ Soporte Técnico</h2>
+            <p class="descripcion">¿Tienes problemas con la plataforma? Cuéntanos aquí</p>
+            
+            <form id="formSoporte" class="form-contacto">
+                <label for="nombreSoporte">Nombre Completo: <span class="requerido">*</span></label>
+                <input type="text" id="nombreSoporte" name="nombreSoporte" required placeholder="Tu nombre">
+
+                <label for="emailSoporte">Correo Electrónico: <span class="requerido">*</span></label>
+                <input type="email" id="emailSoporte" name="emailSoporte" required placeholder="tu@email.com">
+
+                <label for="telefonoSoporte">Teléfono (Opcional):</label>
+                <input type="tel" id="telefonoSoporte" name="telefonoSoporte" placeholder="+54 9 1234567890">
+
+                <label for="asuntoSoporte">Asunto: <span class="requerido">*</span></label>
+                <select id="asuntoSoporte" name="asuntoSoporte" required>
+                    <option value="">-- Selecciona el tipo de problema --</option>
+                    <option value="error">Error en la Plataforma</option>
+                    <option value="figuritas">Problemas con Figuritas</option>
+                    <option value="cuenta">Problemas con mi Cuenta</option>
+                    <option value="interfaz">Interfaz o Navegación</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="mensajeSoporte">Describe tu Problema: <span class="requerido">*</span></label>
+                <textarea id="mensajeSoporte" name="mensajeSoporte" rows="6" required placeholder="Cuéntanos qué está pasando..."></textarea>
+
+                <label for="captura">¿Puedes adjuntar una captura de pantalla? (URL):</label>
+                <input type="url" id="captura" name="captura" placeholder="https://ejemplo.com/imagen.png">
+
+                <div class="info-soporte">
+                    <p>📧 <strong>Email de soporte:</strong> ginopasqualini557@gmail.com</p>
+                    <p>⏱️ <strong>Tiempo de respuesta:</strong> 24-48 horas</p>
+                </div>
+
+                <button type="submit" class="btn-enviar">📤 ENVIAR TICKET DE SOPORTE</button>
+            </form>
+        </div>
+
+        <!-- COLUMNA 2: INTERCAMBIO DE FIGURITAS -->
+        <div class="seccion-contacto">
+            <h2>🔄 Intercambio de Figuritas</h2>
+            <p class="descripcion">¿Quieres intercambiar figuritas? Contacta a otros coleccionistas</p>
+            
+            <form id="formIntercambio" class="form-contacto">
+                <label for="nombreIntercambio">Tu Nombre: <span class="requerido">*</span></label>
+                <input type="text" id="nombreIntercambio" name="nombreIntercambio" required placeholder="Tu nombre">
+
+                <label for="emailIntercambio">Tu Correo: <span class="requerido">*</span></label>
+                <input type="email" id="emailIntercambio" name="emailIntercambio" required placeholder="tu@email.com">
+
+                <label for="telefonoIntercambio">Tu Teléfono: <span class="requerido">*</span></label>
+                <input type="tel" id="telefonoIntercambio" name="telefonoIntercambio" required placeholder="+54 9 1234567890">
+
+                <label for="provincia">Provincia: <span class="requerido">*</span></label>
+                <select id="provincia" name="provincia" required>
+                    <option value="">-- Selecciona tu provincia --</option>
+                    <option value="buenos-aires">Buenos Aires</option>
+                    <option value="cordoba">Córdoba</option>
+                    <option value="santa-fe">Santa Fe</option>
+                    <option value="mendoza">Mendoza</option>
+                    <option value="tucuman">Tucumán</option>
+                    <option value="entre-rios">Entre Ríos</option>
+                    <option value="misiones">Misiones</option>
+                    <option value="formosa">Formosa</option>
+                    <option value="chaco">Chaco</option>
+                    <option value="corrientes">Corrientes</option>
+                    <option value="otra">Otra Provincia</option>
+                </select>
+
+                <label for="figuritasFaltantes">¿Qué figuritas te faltan? <span class="requerido">*</span></label>
+                <textarea id="figuritasFaltantes" name="figuritasFaltantes" rows="4" required placeholder="Ej: Messi #1, Dibu #10, Di María #5..."></textarea>
+
+                <label for="figuritasSobrantes">¿Qué figuritas tienes repetidas?</label>
+                <textarea id="figuritasSobrantes" name="figuritasSobrantes" rows="4" placeholder="Ej: Álvarez #11 (x3), Enzo #8 (x2)..."></textarea>
+
+                <label>¿Prefieres intercambiar por:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="presencial" name="tipoIntercambio" value="presencial" checked>
+                    <label for="presencial" class="label-inline">🤝 Presencialmente</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="postal" name="tipoIntercambio" value="postal">
+                    <label for="postal" class="label-inline">📮 Correo Postal</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="videollamada" name="tipoIntercambio" value="videollamada">
+                    <label for="videollamada" class="label-inline">📹 Videollamada</label>
+                </div>
+
+                <label for="mensajeIntercambio">Mensaje Adicional:</label>
+                <textarea id="mensajeIntercambio" name="mensajeIntercambio" rows="4" placeholder="Cuéntale al otro coleccionista sobre ti..."></textarea>
+
+                <div class="info-soporte">
+                    <p>📧 <strong>También puedes escribir a:</strong> ginopasqualini557@gmail.com</p>
+                    <p>⚠️ <strong>Consejo:</strong> Sé honesto con tus figuritas y respetuoso con otros coleccionistas</p>
+                </div>
+
+                <button type="submit" class="btn-enviar">📤 ENVIAR PROPUESTA DE INTERCAMBIO</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DE FAQ -->
+    <div class="seccion-faq">
+        <h2>❓ Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <h3>¿Cuánto tiempo tarda en responder soporte?</h3>
+            <p>Generalmente respondemos en 24-48 horas hábiles.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Es seguro intercambiar figuritas?</h3>
+            <p>Sí, te recomendamos verificar la identidad del otro coleccionista y hacer intercambios en lugares seguros.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Puedo intercambiar por correo?</h3>
+            <p>Sí, muchos coleccionistas intercambian por correo postal. Recuerda empacar bien las figuritas.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Qué hacer si recibo figuritas dañadas?</h3>
+            <p>Contacta a soporte con fotos y datos del remitente. Te ayudaremos a resolver el problema.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2022-2026 Álbum Virtual Argentina - Todos los derechos reservados</p>
+        <p>Email: ginopasqualini557@gmail.com | Contáctanos cualquier día</p>
+    </footer>
+
+    <script>
+        // MANEJO DEL FORMULARIO DE SOPORTE
+        document.getElementById('formSoporte').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simular envío por email
+            console.log('Ticket de soporte:', data);
+            alert(`✅ Ticket de soporte enviado a ginopasqualini557@gmail.com\n\nNúmero de ticket: #${Date.now()}\n\nTe responderemos en 24-48 horas.`);
+            this.reset();
+        });
+
+        // MANEJO DEL FORMULARIO DE INTERCAMBIO
+        document.getElementById('formIntercambio').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const tiposIntercambio = [];
+            document.querySelectorAll('input[name="tipoIntercambio"]:checked').forEach(cb => {
+                tiposIntercambio.push(cb.value);
+            });
+
+            if (tiposIntercambio.length === 0) {
+                alert('❌ Debes seleccionar al menos un tipo de intercambio');
+                return;
+            }
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Propuesta de intercambio:', data);
+            alert(`✅ Propuesta de intercambio enviada a ginopasqualini557@gmail.com\n\n¡Pronto nos pondremos en contacto!\n\nTe recordamos que siempre es importante verificar la identidad del otro coleccionista.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
