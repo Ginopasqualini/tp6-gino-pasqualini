@@ -2,52 +2,149 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro - Coleccionista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Coleccionista de Argentina</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div class="header-album"><h1>Registro de Coleccionista</h1></div>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🏆 ARGENTINA CAMPEONA 2022</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Álbum</a></li>
+                <li><a href="registro.html" class="active">Registro</a></li>
+                <li><a href="preferencias.html">Preferencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- HEADER -->
+    <div class="header-album">
+        <h1>📝 Registro de Coleccionista</h1>
+        <p>Crea tu cuenta para acceder a todas las funcionalidades</p>
+    </div>
+
+    <!-- FORMULARIO DE REGISTRO -->
     <div class="seccion-formulario">
-        <form action="#" method="GET" autocomplete="off">
-            <label for="nombre">Nombre y Apellido:</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <form id="formRegistro">
+            <fieldset>
+                <legend>Información Personal</legend>
+                
+                <label for="nombre">Nombre y Apellido: <span class="requerido">*</span></label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Correo Electrónico: <span class="requerido">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
 
-            <label for="pass">Contraseña:</label>
-            <input type="password" id="pass" name="pass" required>
+                <label for="pass">Contraseña: <span class="requerido">*</span></label>
+                <input type="password" id="pass" name="pass" required placeholder="Mínimo 8 caracteres">
 
-            <label for="edad">Edad (6-99):</label>
-            <input type="number" id="edad" name="edad" min="6" max="99" required>
+                <label for="confirmPass">Confirmar Contraseña: <span class="requerido">*</span></label>
+                <input type="password" id="confirmPass" name="confirmPass" required placeholder="Repite tu contraseña">
 
-            <p>Categoría de Álbum Preferido:</p>
-            <input type="radio" id="inicial" name="categoria" value="inicial" checked> <label for="inicial">Inicial</label>
-            <input type="radio" id="avanzado" name="categoria" value="avanzado"> <label for="avanzado">Avanzado</label>
+                <label for="edad">Edad (6-99): <span class="requerido">*</span></label>
+                <input type="number" id="edad" name="edad" min="6" max="99" required>
+            </fieldset>
 
-            <p>Temáticas de Interés:</p>
-            <input type="checkbox" id="futbol" name="interes" value="futbol"> <label for="futbol">Fútbol</label>
-            <input type="checkbox" id="comics" name="interes" value="comics"> <label for="comics">Cómics</label>
+            <fieldset>
+                <legend>Preferencias de Colección</legend>
+                
+                <label>Nivel de Experiencia:</label>
+                <div class="radio-group">
+                    <input type="radio" id="inicial" name="categoria" value="inicial" checked>
+                    <label for="inicial" class="label-inline">Inicial (Principiante)</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="intermedio" name="categoria" value="intermedio">
+                    <label for="intermedio" class="label-inline">Intermedio</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="avanzado" name="categoria" value="avanzado">
+                    <label for="avanzado" class="label-inline">Avanzado (Coleccionista)</label>
+                </div>
 
-            <label for="seccion">Sección del Álbum:</label>
-            <select id="seccion" name="seccion">
-                <option value="eliminatorias">Eliminatorias</option>
-                <option value="historicos">Históricos</option>
-            </select>
+                <label>Temáticas de Interés:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="futbol" name="interes" value="futbol" checked>
+                    <label for="futbol" class="label-inline">⚽ Fútbol</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="defensa" name="interes" value="defensa">
+                    <label for="defensa" class="label-inline">🛡️ Defensores</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="mediocampo" name="interes" value="mediocampo">
+                    <label for="mediocampo" class="label-inline">🎯 Mediocampo</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="arqueros" name="interes" value="arqueros">
+                    <label for="arqueros" class="label-inline">🥅 Arqueros</label>
+                </div>
 
-            <label for="id_usuario">ID de Sesión:</label>
-            <input type="text" id="id_usuario" name="id_usuario" value="100" readonly>
-            <input type="hidden" name="sistema" value="SistemaAlbumWeb-v2">
+                <label for="seccion">Sección del Álbum Preferida:</label>
+                <select id="seccion" name="seccion" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="eliminatorias">Eliminatorias</option>
+                    <option value="grupales">Fase de Grupos</option>
+                    <option value="octavos">Octavos de Final</option>
+                    <option value="cuartos">Cuartos de Final</option>
+                    <option value="semis">Semifinales</option>
+                    <option value="final">Final</option>
+                </select>
+            </fieldset>
 
-            <label for="bio">Reseña o faltantes:</label>
-            <textarea id="bio" name="bio" rows="4"></textarea>
+            <fieldset>
+                <legend>Información Técnica</legend>
+                
+                <label for="id_usuario">ID de Sesión:</label>
+                <input type="text" id="id_usuario" name="id_usuario" value="100" readonly>
+                
+                <input type="hidden" name="sistema" value="SistemaAlbumWeb-v2">
 
+                <label for="bio">Figuritas Faltantes / Notas Personales:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Cuéntanos qué figuritas necesitas para completar tu álbum..."></textarea>
+            </fieldset>
+
+            <!-- ACUERDO DE TÉRMINOS -->
+            <div class="terminos">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
+
+            <!-- BOTONES -->
             <div class="acciones">
-                <input type="submit" value="ENVIAR REGISTRO">
-                <input type="reset" value="RESTABLECER CAMPOS">
+                <input type="submit" value="✓ REGISTRARSE" class="btn-enviar">
+                <input type="reset" value="✕ LIMPIAR CAMPOS" class="btn-reset">
             </div>
         </form>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2022-2026 Álbum Virtual Argentina - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        document.getElementById('formRegistro').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const pass = document.getElementById('pass').value;
+            const confirmPass = document.getElementById('confirmPass').value;
+            
+            if (pass !== confirmPass) {
+                alert('❌ Las contraseñas no coinciden');
+                return;
+            }
+            
+            if (pass.length < 8) {
+                alert('❌ La contraseña debe tener mínimo 8 caracteres');
+                return;
+            }
+            
+            alert('✅ ¡Registro completado exitosamente! Bienvenido al Álbum Virtual');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
