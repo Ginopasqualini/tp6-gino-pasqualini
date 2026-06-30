@@ -2,156 +2,62 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Álbum Web de Coleccionables - Selección Argentina</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>Álbum de Figuritas - Selección Argentina</title>
+    <style>
+        /* CSS Integrado para evitar errores de ruta */
+        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .header-album { background: #4392f1; color: white; padding: 20px; text-align: center; border-radius: 10px; }
+        .seccion-sobres { background: white; padding: 20px; margin: 20px 0; border: 2px dashed #4392f1; text-align: center; }
+        
+        /* Cuadrícula */
+        .cuadricula-figuritas { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
+        .tarjeta-figurita { background: white; padding: 15px; border: 1px solid #ddd; border-radius: 8px; width: 200px; text-align: center; }
+        .tarjeta-figurita img { width: 100%; height: auto; border-radius: 4px; }
+        
+        /* Botón e interactividad */
+        .btn-abrir { background: #ff9800; color: white; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; }
+        .btn-pegar { display: inline-block; background: #28a745; color: white; padding: 8px; margin-top: 10px; text-decoration: none; border-radius: 4px; }
+        .btn-pegar:hover { background: #218838; font-size: 1.1em; }
+    </style>
 </head>
 <body>
 
     <div class="header-album">
         <h1>Álbum Virtual: Campeones del Mundo</h1>
-        <p>Colección Oficial - Eliminatorias 2026</p>
     </div>
 
     <div class="seccion-sobres">
         <h2>Tus Sobres Disponibles</h2>
-        <div class="sobre">
-            <p>Tienes <strong>2</strong> sobres sin abrir.</p>
-            <a href="#" class="btn-abrir">Abrir Sobre</a>
-        </div>
+        <button class="btn-abrir" onclick="abrirSobre()">Abrir Sobre</button>
     </div>
 
-    <div class="indice-container">
-        <h2>Índice de la Colección</h2>
-        <ol class="lista-indice">
-            <li>Escudo AFA</li>
-            <li>Foto Grupal (Equipo)</li>
-            <li>Emiliano Martínez</li>
-            <li>Lionel Messi</li>
-            <li>Nicolás Otamendi</li>
-            <li>Rodrigo De Paul</li>
-        </ol>
-    </div>
-
-    <div class="cuadricula-figuritas">
+    <div id="contenedor-figuritas" class="cuadricula-figuritas" style="display:none;">
         
         <div class="tarjeta-figurita">
-            <div class="estado-etiqueta">
-                <span class="nueva">NUEVA</span>
-            </div>
-            <img src="img/escudoafa.png.png" alt="Figurita del Escudo de la AFA" class="img-figurita">
-            <dl class="ficha-tecnica">
-                <dt>Nombre:</dt>
-                <dd>Escudo AFA</dd>
-                <dt>Tipo:</dt>
-                <dd>Emblema Oficial</dd>
-            </dl>
+            <img src="img/lionelmessi.png" alt="Messi">
+            <p>Lionel Messi</p>
             <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
         </div>
 
         <div class="tarjeta-figurita">
-            <div class="estado-etiqueta">
-                <span class="comun">COMÚN</span>
-            </div>
-            <img src="img/fotogrupal.png" alt="Figurita del equipo completo" class="img-figurita">
-            <dl class="ficha-tecnica">
-                <dt>Nombre:</dt>
-                <dd>Selección Argentina</dd>
-                <dt>Tipo:</dt>
-                <dd>Foto Grupal</dd>
-            </dl>
+            <img src="img/emilianomartinez.png" alt="Dibu">
+            <p>Emiliano Martínez</p>
             <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
         </div>
 
         <div class="tarjeta-figurita">
-            <div class="estado-etiqueta">
-                <span class="nueva">NUEVA</span>
-            </div>
-            <img src="img/emilianomartinez.png" alt="Figurita de Emiliano Martínez" class="img-figurita">
-            <dl class="ficha-tecnica">
-                <dt>Nombre:</dt>
-                <dd>Emiliano Martínez</dd>
-                <dt>Equipo:</dt>
-                <dd>Aston Villa FC</dd>
-                <dt>Física:</dt>
-                <dd>1,95 m | 88 kg</dd>
-            </dl>
-            <h4>Atributos:</h4>
-            <ul class="lista-atributos">
-                <li>Reflejos</li>
-                <li>Penales</li>
-                <li>Juego Aéreo</li>
-            </ul>
-            <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
-        </div>
-
-        <div class="tarjeta-figurita">
-            <div class="estado-etiqueta">
-                <span class="legendaria">LEGENDARIA</span>
-            </div>
-            <img src="img/lionelmessi.png" alt="Figurita de Lionel Messi" class="img-figurita">
-            <dl class="ficha-tecnica">
-                <dt>Nombre:</dt>
-                <dd>Lionel Messi</dd>
-                <dt>Equipo:</dt>
-                <dd>Inter Miami CF</dd>
-                <dt>Física:</dt>
-                <dd>1,70 m | 72 kg</dd>
-            </dl>
-            <h4>Atributos:</h4>
-            <ul class="lista-atributos">
-                <li>Visión de juego</li>
-                <li>Tiro libre</li>
-                <li>Regate</li>
-            </ul>
-            <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
-        </div>
-
-        <div class="tarjeta-figurita">
-            <div class="estado-etiqueta">
-                <span class="comun">COMÚN</span>
-            </div>
-            <img src="img/nicolasotamendi.png" alt="Figurita de Nicolás Otamendi" class="img-figurita">
-            <dl class="ficha-tecnica">
-                <dt>Nombre:</dt>
-                <dd>Nicolás Otamendi</dd>
-                <dt>Equipo:</dt>
-                <dd>SL Benfica</dd>
-                <dt>Física:</dt>
-                <dd>1,83 m | 81 kg</dd>
-            </dl>
-            <h4>Atributos:</h4>
-            <ul class="lista-atributos">
-                <li>Fuerza</li>
-                <li>Cabeceo</li>
-                <li>Marcaje</li>
-            </ul>
-            <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
-        </div>
-
-        <div class="tarjeta-figurita">
-            <div class="estado-etiqueta">
-                <span class="comun">COMÚN</span>
-            </div>
-            <img src="img/rodrigodepaul.png" alt="Figurita de Rodrigo De Paul" class="img-figurita">
-            <dl class="ficha-tecnica">
-                <dt>Nombre:</dt>
-                <dd>Rodrigo De Paul</dd>
-                <dt>Equipo:</dt>
-                <dd>Atlético de Madrid</dd>
-                <dt>Física:</dt>
-                <dd>1,80 m | 78 kg</dd>
-            </dl>
-            <h4>Atributos:</h4>
-            <ul class="lista-atributos">
-                <li>Resistencia</li>
-                <li>Pase largo</li>
-                <li>Recuperación</li>
-            </ul>
+            <img src="img/escudoafa.png.png" alt="Escudo">
+            <p>Escudo AFA</p>
             <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
         </div>
 
     </div>
 
+    <script>
+        function abrirSobre() {
+            // Esta función muestra el div oculto al hacer clic
+            document.getElementById('contenedor-figuritas').style.display = 'flex';
+        }
+    </script>
 </body>
 </html>
