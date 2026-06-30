@@ -2,23 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Álbum de Figuritas - Selección Argentina</title>
-    <style>
-        /* CSS Integrado para evitar errores de ruta */
-        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
-        .header-album { background: #4392f1; color: white; padding: 20px; text-align: center; border-radius: 10px; }
-        .seccion-sobres { background: white; padding: 20px; margin: 20px 0; border: 2px dashed #4392f1; text-align: center; }
-        
-        /* Cuadrícula */
-        .cuadricula-figuritas { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
-        .tarjeta-figurita { background: white; padding: 15px; border: 1px solid #ddd; border-radius: 8px; width: 200px; text-align: center; }
-        .tarjeta-figurita img { width: 100%; height: auto; border-radius: 4px; }
-        
-        /* Botón e interactividad */
-        .btn-abrir { background: #ff9800; color: white; padding: 10px 20px; border: none; cursor: pointer; font-weight: bold; }
-        .btn-pegar { display: inline-block; background: #28a745; color: white; padding: 8px; margin-top: 10px; text-decoration: none; border-radius: 4px; }
-        .btn-pegar:hover { background: #218838; font-size: 1.1em; }
-    </style>
+    <title>Álbum Virtual - Selección Argentina</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
@@ -28,35 +13,31 @@
 
     <div class="seccion-sobres">
         <h2>Tus Sobres Disponibles</h2>
-        <button class="btn-abrir" onclick="abrirSobre()">Abrir Sobre</button>
+        <button class="btn-abrir" onclick="alert('Abriendo sobre...')">Abrir Sobre</button>
+        <br><br>
+        <a href="registro.html" style="color: blue;">Ir al formulario de registro</a>
     </div>
 
-    <div id="contenedor-figuritas" class="cuadricula-figuritas" style="display:none;">
-        
+    <div class="cuadricula-figuritas">
         <div class="tarjeta-figurita">
             <img src="img/lionelmessi.png" alt="Messi">
             <p>Lionel Messi</p>
-            <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
+            <button class="btn-pegar" id="btn-messi" onclick="pegarFigurita('btn-messi')">¡Pegar Figurita!</button>
         </div>
-
+        
         <div class="tarjeta-figurita">
             <img src="img/emilianomartinez.png" alt="Dibu">
-            <p>Emiliano Martínez</p>
-            <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
+            <p>Dibu Martínez</p>
+            <button class="btn-pegar" id="btn-dibu" onclick="pegarFigurita('btn-dibu')">¡Pegar Figurita!</button>
         </div>
-
-        <div class="tarjeta-figurita">
-            <img src="img/escudoafa.png.png" alt="Escudo">
-            <p>Escudo AFA</p>
-            <a href="#" class="btn-pegar">¡Pegar Figurita!</a>
-        </div>
-
     </div>
 
     <script>
-        function abrirSobre() {
-            // Esta función muestra el div oculto al hacer clic
-            document.getElementById('contenedor-figuritas').style.display = 'flex';
+        function pegarFigurita(idBoton) {
+            let boton = document.getElementById(idBoton);
+            boton.innerHTML = "¡FIGURITA PEGADA!";
+            boton.style.backgroundColor = "#6c757d";
+            boton.style.pointerEvents = "none";
         }
     </script>
 </body>
