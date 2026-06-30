@@ -2,18 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro - Álbum Web</title>
+    <title>Registro - Coleccionista</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
-    <div class="header-album">
-        <h1>Registro de Coleccionista</h1>
-    </div>
+    <div class="header-album"><h1>Registro de Coleccionista</h1></div>
 
     <div class="seccion-formulario">
         <form action="#" method="GET" autocomplete="off">
-            
             <label for="nombre">Nombre y Apellido:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -27,18 +23,14 @@
             <input type="number" id="edad" name="edad" min="6" max="99" required>
 
             <p>Categoría de Álbum Preferido:</p>
-            <input type="radio" id="inicial" name="categoria" value="inicial" checked>
-            <label for="inicial">Álbum Inicial</label>
-            <input type="radio" id="avanzado" name="categoria" value="avanzado">
-            <label for="avanzado">Álbum Avanzado</label>
+            <input type="radio" id="inicial" name="categoria" value="inicial" checked> <label for="inicial">Inicial</label>
+            <input type="radio" id="avanzado" name="categoria" value="avanzado"> <label for="avanzado">Avanzado</label>
 
             <p>Temáticas de Interés:</p>
-            <input type="checkbox" id="futbol" name="interes" value="futbol">
-            <label for="futbol">Fútbol</label>
-            <input type="checkbox" id="comics" name="interes" value="comics">
-            <label for="comics">Cómics</label>
+            <input type="checkbox" id="futbol" name="interes" value="futbol"> <label for="futbol">Fútbol</label>
+            <input type="checkbox" id="comics" name="interes" value="comics"> <label for="comics">Cómics</label>
 
-            <label for="seccion">Sección del Álbum a Completar:</label>
+            <label for="seccion">Sección del Álbum:</label>
             <select id="seccion" name="seccion">
                 <option value="eliminatorias">Eliminatorias</option>
                 <option value="historicos">Históricos</option>
@@ -46,7 +38,6 @@
 
             <label for="id_usuario">ID de Sesión:</label>
             <input type="text" id="id_usuario" name="id_usuario" value="100" readonly>
-            
             <input type="hidden" name="sistema" value="SistemaAlbumWeb-v2">
 
             <label for="bio">Reseña o faltantes:</label>
