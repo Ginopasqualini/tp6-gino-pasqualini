@@ -1,0 +1,28 @@
+/* Estilos Globales */
+body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
+.header-album { background: #4392f1; color: white; padding: 20px; text-align: center; border-radius: 10px; }
+
+/* Estilos Formulario */
+.seccion-formulario { background: white; padding: 20px; margin: 20px auto; max-width: 500px; border-radius: 8px; border: 1px solid #ddd; }
+label { font-weight: bold; display: block; margin-top: 15px; }
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
+    width: 100%; padding: 10px; margin-top: 5px; box-sizing: border-box;
+}
+
+/* Botones con Uppercase y Cursor Pointer */
+input[type="submit"], input[type="reset"] {
+    background-color: #4392f1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase; 
+    cursor: pointer; 
+    margin-top: 20px;
+}
+input[type="submit"]:hover, input[type="reset"]:hover { background-color: #2a6bb8; }
+
+/* Figuritas */
+.cuadricula-figuritas { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
+.tarjeta-figurita { background: white; padding: 15px; border: 1px solid #ddd; width: 200px; text-align: center; }
+.tarjeta-figurita img { width: 100%; }
+.btn-abrir { background: #ff9800; color: white; padding: 10px 20px; border: none; cursor: pointer; }
