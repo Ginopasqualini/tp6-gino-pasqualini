@@ -2,43 +2,125 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Álbum Virtual - Selección Argentina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum Virtual - Selección Argentina Campeona del Mundo 2022</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🏆 ARGENTINA CAMPEONA 2022</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Álbum</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="preferencias.html">Preferencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- HEADER -->
     <div class="header-album">
-        <h1>Álbum Virtual: Campeones del Mundo</h1>
+        <h1>🇦🇷 Álbum Virtual: Campeones del Mundo 2022 🏆</h1>
+        <p>Colecciona todas las figuritas de la Selección Argentina</p>
     </div>
 
+    <!-- SECCIÓN SOBRES -->
     <div class="seccion-sobres">
-        <h2>Tus Sobres Disponibles</h2>
-        <button class="btn-abrir" onclick="alert('Abriendo sobre...')">Abrir Sobre</button>
-        <br><br>
-        <a href="registro.html" style="color: blue;">Ir al formulario de registro</a>
-    </div>
-
-    <div class="cuadricula-figuritas">
-        <div class="tarjeta-figurita">
-            <img src="img/lionelmessi.png" alt="Messi">
-            <p>Lionel Messi</p>
-            <button class="btn-pegar" id="btn-messi" onclick="pegarFigurita('btn-messi')">¡Pegar Figurita!</button>
-        </div>
-        
-        <div class="tarjeta-figurita">
-            <img src="img/emilianomartinez.png" alt="Dibu">
-            <p>Dibu Martínez</p>
-            <button class="btn-pegar" id="btn-dibu" onclick="pegarFigurita('btn-dibu')">¡Pegar Figurita!</button>
+        <h2>📦 Tus Sobres Disponibles</h2>
+        <button class="btn-abrir">Abrir Sobre Aleatorio</button>
+        <div class="contador-sobres">
+            <p>Tienes <strong>10</strong> sobres disponibles</p>
         </div>
     </div>
 
-    <script>
-        function pegarFigurita(idBoton) {
-            let boton = document.getElementById(idBoton);
-            boton.innerHTML = "¡FIGURITA PEGADA!";
-            boton.style.backgroundColor = "#6c757d";
-            boton.style.pointerEvents = "none";
-        }
-    </script>
+    <!-- CUADRÍCULA DE FIGURITAS -->
+    <div class="container-album">
+        <h2>⭐ Figuritas de la Selección</h2>
+        <div class="cuadricula-figuritas">
+            <div class="tarjeta-figurita">
+                <img src="img/lionelmessi.png" alt="Messi" class="figurita-img">
+                <h3>Lionel Messi</h3>
+                <p class="posicion">Delantero - Capitán</p>
+                <button class="btn-pegar" data-jugador="messi">¡Pegar Figurita!</button>
+            </div>
+            
+            <div class="tarjeta-figurita">
+                <img src="img/emilianomartinez.png" alt="Dibu" class="figurita-img">
+                <h3>Emiliano Martínez</h3>
+                <p class="posicion">Arquero - MVP</p>
+                <button class="btn-pegar" data-jugador="dibu">¡Pegar Figurita!</button>
+            </div>
+
+            <div class="tarjeta-figurita">
+                <img src="img/angeldi-maria.png" alt="Ángel Di María" class="figurita-img">
+                <h3>Ángel Di María</h3>
+                <p class="posicion">Extremo Derecho</p>
+                <button class="btn-pegar" data-jugador="dimariaangel">¡Pegar Figurita!</button>
+            </div>
+
+            <div class="tarjeta-figurita">
+                <img src="img/julianalmada.png" alt="Julián Álvarez" class="figurita-img">
+                <h3>Julián Álvarez</h3>
+                <p class="posicion">Delantero</p>
+                <button class="btn-pegar" data-jugador="alvarez">¡Pegar Figurita!</button>
+            </div>
+
+            <div class="tarjeta-figurita">
+                <img src="img/enzofer.png" alt="Enzo Fernández" class="figurita-img">
+                <h3>Enzo Fernández</h3>
+                <p class="posicion">Mediocampista</p>
+                <button class="btn-pegar" data-jugador="enzo">¡Pegar Figurita!</button>
+            </div>
+
+            <div class="tarjeta-figurita">
+                <img src="img/nicolastagliafico.png" alt="Nicolás Tagliafico" class="figurita-img">
+                <h3>Nicolás Tagliafico</h3>
+                <p class="posicion">Lateral Izquierdo</p>
+                <button class="btn-pegar" data-jugador="taglia">¡Pegar Figurita!</button>
+            </div>
+
+            <div class="tarjeta-figurita">
+                <img src="img/joaquincar.png" alt="Joaquín Correa" class="figurita-img">
+                <h3>Joaquín Correa</h3>
+                <p class="posicion">Delantero</p>
+                <button class="btn-pegar" data-jugador="correa">¡Pegar Figurita!</button>
+            </div>
+
+            <div class="tarjeta-figurita">
+                <img src="img/cristianromero.png" alt="Cristian Romero" class="figurita-img">
+                <h3>Cristian Romero</h3>
+                <p class="posicion">Defensa Central</p>
+                <button class="btn-pegar" data-jugador="romero">¡Pegar Figurita!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESTADÍSTICAS DEL ÁLBUM -->
+    <div class="stats-album">
+        <div class="stat-box">
+            <h3>Figuritas Pegadas</h3>
+            <p id="pegadas">0/8</p>
+        </div>
+        <div class="stat-box">
+            <h3>Progreso</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress" style="width: 0%"></div>
+            </div>
+        </div>
+        <div class="stat-box">
+            <h3>Faltantes</h3>
+            <p id="faltantes">8</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2022-2026 Álbum Virtual Argentina - Todos los derechos reservados</p>
+        <p>¡Ayuda a Argentina a completar su colección del Mundial!</p>
+    </footer>
+
+    <script src="js/album.js"></script>
 </body>
 </html>
